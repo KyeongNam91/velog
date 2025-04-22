@@ -18,13 +18,9 @@ jobs:
 
     - name: Push changes
       run: |
-        git config --global user.name 'KyeongNam91'
-        git config --global user.email 'lnam061@gmail.com'
-        git push https://${{ secrets.GH_PAT_HISU }}@github.com/gmltn9233/velog_hisu.git 
-        
-        # 깃허브 아이디
-        # 깃허브 이메일
-        # https://${{SecretKey}}@github.com/KyeongNam91/velog.git
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git push https://${{ secrets.GH_PAT_HISU }}@github.com/Kyeongnam/velog.git 
 
     - name: Set up Python
       uses: actions/setup-python@v2
